@@ -1,20 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Manuja Ravishka</title>
-  <!--favicon-->
-  <link rel="icon" type="image/x-icon" href="../favicon.ico">
-  <link rel="stylesheet" href="style.css">
-
-  <meta name="keywords" content="HTML, CSS, JS">
-  <meta name="description" content="This my HTML, CSS, JS Tutorial">
-  <meta name="author" content="Manuja Ravishka ">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manuja Ravishka</title>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+  <!-- HEADER -->
+  <header>
+    <div class="header-content">
+      <h1>𝙼𝚊𝚗𝚞𝚓𝚊.</h1>
+    </div>
 
+    <nav>
+      <div class="icon-bar">
+        <a href="#"><i class="fa-regular fa-house"></i></a>   
+        <a href="#"><i class="fa-regular fa-folder"></i></a>
+        <a href="#"><i class="fa-regular fa-note-sticky"></i></a> 
+        <a href="#"><i class="fa-solid fa-book-open"></i></a> 
+        <a href="#"><i class="fa-regular fa-envelope"></i></a>
+
+      </div>
+    </nav>
+  </header>
+
+
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© <span id="year"></span> Manuja Ravishka. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Auto-update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
