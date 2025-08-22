@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manuja Ravishka</title>
-  <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 
   <!-- HEADER -->
   <header>
@@ -23,12 +23,50 @@
         <a href="#"><i class="fa-regular fa-note-sticky"></i></a> 
         <a href="#"><i class="fa-solid fa-book-open"></i></a> 
         <a href="#"><i class="fa-regular fa-envelope"></i></a>
-
       </div>
     </nav>
   </header>
 
+  <!-- LEFT SIDEBAR -->
+  <div class="left-sidebar">
+    <div class="sidebar-inner">
+      <div class="sidebar-inner-top">
+        <img src="/assets/images/profile.jpg" alt="Profile Image">
+        <h2>Manuja</h2>
+        <p id="left-p">A passionate Software Engineer who loves building innovative and impactful solutions.</p>
+      </div>
+    </div>
+  </div>
 
+  <!-- MAIN CONTENT AREA -->
+  <div class="main-content">
+    <div id="aaa">Top Section: MANAASFASFA</div>
+
+    <section class="content-block"> 
+      <h2>Section 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <section class="content-block"> 
+      <h2>Section 2</h2>
+      <p>Praesent imperdiet nunc sit amet libero sagittis.</p>
+    </section>
+
+    <section class="content-block"> 
+      <h2>Section 3</h2>
+      <p>Fusce in sem sed ligula cursus feugiat.</p>
+    </section>
+
+    <section class="content-block"> 
+      <h2>Section 4</h2>
+      <p>Sed sit amet sapien at lacus posuere ullamcorper.</p>
+    </section>
+
+    <section class="content-block"> 
+      <h2>Section 5</h2>
+      <p>More scrolling content to test header hiding effect...</p>
+    </section>
+  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -36,8 +74,27 @@
   </footer>
 
   <script>
-    // Auto-update year
     document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+    const nav = document.querySelector('.icon-bar');
+
+    window.addEventListener('scroll', function() {
+      let st = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (st > lastScrollTop) {
+        header.classList.add('hide-header');
+        nav.classList.add('hide-header');
+      } else {
+        header.classList.remove('hide-header');
+        nav.classList.remove('hide-header');
+      }
+
+      lastScrollTop = st <= 0 ? 0 : st;
+    });
   </script>
 
 </body>
