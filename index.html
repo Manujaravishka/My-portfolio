@@ -9,19 +9,17 @@
 </head>
 <body>
 
-
   <!-- HEADER -->
   <header>
     <div class="header-content">
       <h1>𝙼𝚊𝚗𝚞𝚓𝚊.</h1>
     </div>
-
     <nav>
       <div class="icon-bar">
-        <a href="#"><i class="fa-regular fa-house"></i></a>   
+        <a href="#main-home"><i class="fa-regular fa-house"></i></a>  
+        <a href="#main-skills"><i class="fa-solid fa-book-open"></i></a>  
         <a href="#"><i class="fa-regular fa-folder"></i></a>
-        <a href="#"><i class="fa-regular fa-note-sticky"></i></a> 
-        <a href="#"><i class="fa-solid fa-book-open"></i></a> 
+        <a href="#"><i class="fa-regular fa-note-sticky"></i></a>         
         <a href="#"><i class="fa-regular fa-envelope"></i></a>
       </div>
     </nav>
@@ -32,38 +30,52 @@
     <div class="sidebar-inner">
       <div class="sidebar-inner-top">
         <img src="/assets/images/profile.jpg" alt="Profile Image">
-        <h2>Manuja</h2>
-        <p id="left-p">A passionate Software Engineer who loves building innovative and impactful solutions.</p>
+        <h2 class="first-name">Manuja</h2>
+        <h2 class="last-name">Ravishka</h2>
+        <p id="left-p">
+          A Software Engineer who enjoys creating useful and innovative software.
+        </p>
+        <div class="left-icon">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-regular fa-envelope"></i></a>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- MAIN CONTENT AREA -->
   <div class="main-content">
-    <div id="aaa">Top Section: MANAASFASFA</div>
+    <section id="main-home">
+       <h1>SOFTWARE</h1>
+    <h1 id="second-line">ENGINEER</h1>
 
-    <section class="content-block"> 
-      <h2>Section 1</h2>
+    </section>
+   
+    <section class="content-block" id="main-skills"> 
+      <h1>SKILLS</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </section>
 
     <section class="content-block"> 
-      <h2>Section 2</h2>
+      <h1>PROJECTS</h1>
       <p>Praesent imperdiet nunc sit amet libero sagittis.</p>
     </section>
 
     <section class="content-block"> 
-      <h2>Section 3</h2>
+      <h1>ASSIGNMENTS</h1>
       <p>Fusce in sem sed ligula cursus feugiat.</p>
     </section>
 
     <section class="content-block"> 
-      <h2>Section 4</h2>
+      <h1>CERTIFICATE</h1>
       <p>Sed sit amet sapien at lacus posuere ullamcorper.</p>
     </section>
 
     <section class="content-block"> 
-      <h2>Section 5</h2>
+      <h1>LET'S WORK</h1>
+      <h1 id="second-line">TOGETHER</h1>
       <p>More scrolling content to test header hiding effect...</p>
     </section>
   </div>
@@ -74,17 +86,16 @@
   </footer>
 
   <script>
+    // Current year
     document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 
-  <script>
+    // Hide header on scroll
     let lastScrollTop = 0;
     const header = document.querySelector('header');
     const nav = document.querySelector('.icon-bar');
 
     window.addEventListener('scroll', function() {
       let st = window.pageYOffset || document.documentElement.scrollTop;
-
       if (st > lastScrollTop) {
         header.classList.add('hide-header');
         nav.classList.add('hide-header');
@@ -92,7 +103,6 @@
         header.classList.remove('hide-header');
         nav.classList.remove('hide-header');
       }
-
       lastScrollTop = st <= 0 ? 0 : st;
     });
   </script>

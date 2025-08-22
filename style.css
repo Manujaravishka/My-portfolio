@@ -1,6 +1,6 @@
-/* --------------------
-   RESET & BASE STYLES
--------------------- */
+
+   /*RESET & BASE STYLES*/
+
 * {
   margin: 0;
   padding: 0;
@@ -16,62 +16,9 @@ body {
   flex-direction: column;
 }
 
-/* --------------------
-   LEFT SIDEBAR
--------------------- */
-.left-sidebar {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 420px;
-  height: calc(100vh - 115px);
-  background: #000000; 
-  z-index: 999;
-  overflow-y: auto;
-  display: flex;
-  justify-content: center;
-}
 
-.sidebar-inner {
-  position: fixed;   /* browser screen ekata fix */
-  top: 100px;        /* header ekata yatin */
-  left: 40px;       /* screen left idan gap eka */
-  
-  background: #fff;
-  width: 205px;
-  height: 355px;
-  border-radius: 10px;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
+/*    HEADER   */
 
-
-.sidebar-inner-top {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.sidebar-inner-top img {
-  width: 450px;
-  max-width: 135px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 15px;
-  
-}
-
-.sidebar-inner-top h2 {
-  margin-top: 10px;
-  color: #333;
-}
-
-/* --------------------
-   HEADER
--------------------- */
 header {
   position: fixed;
   top: 0;
@@ -88,17 +35,20 @@ header {
   align-items: center;
   justify-content: flex-start;
   height: 60px;
-  padding-left: 15px;
+  padding-left: 40px;
 }
 
 .header-content h1 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
   color: #eee;
   margin: 0;
 }
 
+
+
 /* NAV & ICON BAR */
+
 nav {
   position: fixed;
   top: 10px;
@@ -137,15 +87,101 @@ nav {
   transform: scale(1.2);
 }
 
-/* --------------------
-   MAIN CONTENT
--------------------- */
-#aaa {
-  background-color: #eee;
-  color: #000;
-  height: 100px;
-  width: 100%;
+/*    LEFT SIDEBAR  */
+.left-sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 420px;
+  height: calc(100vh - 115px);
+  background: #000000; 
+  z-index: 999;
+  overflow-y: auto;
+  display: flex;
+  justify-content: flex-start;
 }
+
+.sidebar-inner {
+  position: relative;
+  margin-top: 30px;
+  margin-left: 39px;
+  background: #ffffff;
+  width: 207px;
+  height: 380px;
+  border-radius: 12px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.sidebar-inner-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sidebar-inner-top img {
+  width: 133px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.sidebar-inner-top h2 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.1;
+  position: relative;
+  margin: 8px 0 0 0;
+}
+
+.sidebar-inner-top h2.first-name {
+  left: -33px;
+  color: #000;
+}
+
+.sidebar-inner-top h2.last-name {
+  color: #c44614;
+  left: -25px;
+  margin-top: -4px;
+}
+
+#left-p {
+  font-size: 10px;
+  color: #333;
+  text-align: center;
+  margin-top: 12px;
+  line-height: 1.1;
+}
+
+.left-icon {
+  margin-top: 36px;
+  display: flex;
+  gap: 6px;
+}
+
+.left-icon a {
+  color: #f97316;
+  font-size: 19px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.left-icon a:hover {
+  transform: scale(1.2);
+  color: #d35400;
+}
+
+
+
+
+/*    MAIN CONTENT     */
 
 .main-content {
   margin-left: 420px;
@@ -157,6 +193,37 @@ nav {
   flex-grow: 1;
   min-height: calc(100vh - 115px);
   overflow-y: auto;
+}
+
+.main-content h1 {
+  font-size: 64px;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  color: #f0eeee;
+  line-height: 1.1;
+  position: relative;
+}
+
+#second-line {
+  margin-top: -4px;
+  color: #c44614;
+}
+
+/* --------------------
+   CONTENT BLOCKS
+-------------------- */
+.content-block {
+  margin-top: 40px;
+}
+
+.content-block h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.content-block p {
+  font-size: 14px;
+  color: #ddd;
 }
 
 /* --------------------
@@ -191,11 +258,11 @@ footer {
   .left-sidebar {
     width: 200px;
   }
-  
+
   .main-content {
     margin-left: 200px;
   }
-  
+
   .icon-bar {
     padding: 2px 8px;
     gap: 8px;
@@ -204,29 +271,6 @@ footer {
   .icon-bar a {
     width: 35px;
     height: 35px;
-    font-size: 18px;
+    font-size: 13px;
   }
-}
-
-
-oke tiyana meeka
-
-
-.sidebar-inner {
-  background: #fff;
-  width: 205px;
-  height: 355px;
-  margin-top: 20px;
-  border-radius: 1px;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  overflow-y: auto;
-}
-
-#left-p{
-  font-size: 10px;
-  color: #000;
 }
