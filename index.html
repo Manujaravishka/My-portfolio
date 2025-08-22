@@ -81,31 +81,7 @@
   </div>
 
   <!-- FOOTER -->
-  <footer>
-    <p>© <span id="year"></span> Manuja Ravishka. All rights reserved.</p>
-  </footer>
 
-  <script>
-    // Current year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Hide header on scroll
-    let lastScrollTop = 0;
-    const header = document.querySelector('header');
-    const nav = document.querySelector('.icon-bar');
-
-    window.addEventListener('scroll', function() {
-      let st = window.pageYOffset || document.documentElement.scrollTop;
-      if (st > lastScrollTop) {
-        header.classList.add('hide-header');
-        nav.classList.add('hide-header');
-      } else {
-        header.classList.remove('hide-header');
-        nav.classList.remove('hide-header');
-      }
-      lastScrollTop = st <= 0 ? 0 : st;
-    });
-  </script>
 
 </body>
 </html>

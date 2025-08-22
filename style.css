@@ -229,7 +229,7 @@ nav {
 /* --------------------
    FOOTER
 -------------------- */
-footer {
+/* footer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -242,7 +242,7 @@ footer {
   padding: 15px 0;
   font-size: 12px;
   border-top: 1px solid #333;
-}
+} */
 
 /* --------------------
    HIDE HEADER ON SCROLL
