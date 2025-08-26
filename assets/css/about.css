@@ -1,0 +1,29 @@
+ #second-line {
+  margin-top: -4px;
+  color: #c44614;
+
+}
+#se-p{
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.se-icone a{
+  color: white;
+  font-size: 30px;
+ transition: transform 0.2s ease, color 0.2s ease;
+
+  
+
+}
+.se-icone a{
+   transform: scale(1.2);
+}
+.se-icone button{
+  border-radius: 10px;
+  font-size: 15px;
+  width: 100px;
+  height: 40px;
+  margin-top: 6px;
+   padding: 2px 4px;
+}

@@ -1,0 +1,60 @@
+.contact-form {
+  max-width: 1150px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two equal columns */
+  gap: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 2px;
+  color: white;
+  font-size: 22px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 6px;
+  background: #e5e5e5;
+  font-size: 10px;
+  width: 570px;
+}
+
+.contact-form textarea {
+  resize: none;
+  min-height: 250px;
+}
+
+.submit-btn {
+  padding: 12px;
+  background: linear-gradient(90deg, #c44614, #e6542a, #c44614);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 23px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 570px; /* full width */
+  background-size: 200% 100%; /* for animation */
+  transition: all 0.4s ease;
+}
+
+.submit-btn:hover {
+  background-position: right center; /* slide the gradient */
+  transform: scale(1.05); /* subtle grow effect */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* glowing shadow */
+}
