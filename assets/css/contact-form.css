@@ -59,4 +59,13 @@
   box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* glowing shadow */
 }
 
-
+.contact-info{
+  width: 300px;
+  height: 00px;
+  position: relative;
+  left: 900px;
+  bottom: 200px;
+}
+#info-h3{
+ color: #c44614;
+}

@@ -20,10 +20,10 @@ header {
 }
 
 .header-content h1 {
-  font-size: 1.7rem;
+  font-size: 45px;
   font-weight: bold;
   color: #eee;
-  margin: 0;
+  margin: 50px;
 }
 
 /* NAV & ICON BAR */

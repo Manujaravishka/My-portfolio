@@ -1,0 +1,7 @@
+.certificate div{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: aliceblue;
+    top: 100px;
+}

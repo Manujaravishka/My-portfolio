@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/left-siderbar.css">
   <link rel="stylesheet" href="assets/css/about.css">
   <link rel="stylesheet" href="assets/css/contact-form.css">
+  <link rel="stylesheet" href="assets/css/certificate.css">
 </head>
 <body>
 
@@ -79,21 +80,40 @@
     
     </section>
 
-    <section class="content-block" id="main-assignments"> 
-      <h1>ASSIGNMENTS</h1>
-       
-      
- 
+  <section class="assignments">
+  <h1>ASSIGNMENTS</h1>
+  <div class="assignments-container">
+    <div class="assignment">ASSIGNMENT 1</div>
+    <div class="assignment">ASSIGNMENT 2</div>
+    <div class="assignment">ASSIGNMENT 3</div>
+    <div class="assignment">ASSIGNMENT 4</div>
+    <div class="assignment">ASSIGNMENT 5</div>
+    <div class="assignment">ASSIGNMENT 6</div>
+    <div class="assignment">ASSIGNMENT 7</div>
+    <div class="assignment">ASSIGNMENT 8</div>
+    <div class="assignment">ASSIGNMENT 9</div>
+  </div>
+</section>
 
-    </section>
 
-    <section class="content-block"> 
+    <section class="certificate"> 
       <h1>CERTIFICATE</h1>
+      
+        <div class="div">
 
+        </div>
+        <div>
+
+        </div>
+      
       
 
 
     </section>
+  <br><br><br><br><br><br>
+
+
+
 
     <section class="content-block" id="main-contact"> 
       <h1>LET'S WORK</h1>
@@ -114,227 +134,14 @@
 
     <button type="submit" class="submit-btn">Submit</button>
   </form>
-  <div class="contact-outher">
+   <div class="contact-info">
+    <h3 id="info-h3">Contact Information</h3>
     <address>
-      <h5>Address</h5>
-      1ST MAIL POST RATHMALGODA , PORUWADANDA
+      <a href=""><i class="fa-solid fa-location-dot"></i></a>
+      <p><strong>Address:</strong><br> 409, 1ST MAIL POST<br>RATHMALGODA, PORUWADANDA, HORANA,</p>
     </address>
   </div>
-      
-     
+    
     </section>
-    <div class="aaa">
-    a
-    </div>
-  </div>
-      
-
-
-
-
-
-
-
-  
-  <!-- FOOTER -->
- <footer>
-    <p>© <span id="year"></span> Manuja Ravishka. All rights reserved.</p>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
-  <script>
-    let lastScrollTop = 0;
-    const header = document.querySelector('header');
-    const nav = document.querySelector('.icon-bar');
-
-    window.addEventListener('scroll', function() {
-      let st = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (st > lastScrollTop) {
-        header.classList.add('hide-header');
-        nav.classList.add('hide-header');
-      } else {
-        header.classList.remove('hide-header');
-        nav.classList.remove('hide-header');
-      }
-
-      lastScrollTop = st <= 0 ? 0 : st;
-    });
-    const certificates = [
-    
-  {src: "assets/images/certificate/css.jpg", caption: "Advanced CSS & Responsive Design"},
-  {src: "assets/images/certificate/html.jpg", caption: "JavaScript Algorithms & Data Structures"},
-  {src: "https://via.placeholder.com/200x150/d35400/fff?text=React+Certificate", caption: "Front End Development Libraries"},
-  {src: "https://via.placeholder.com/200x150/f97316/fff?text=Node.js+Certificate", caption: "Back End Development and APIs"},
-  {src: "https://via.placeholder.com/200x150/c44614/fff?text=Python+Certificate", caption: "Scientific Computing with Python"},
-  {src: "https://via.placeholder.com/200x150/e6542a/fff?text=Data+Analysis", caption: "Data Analysis with Python"}
-];
-
-let currentIndex = 0;
-
-// Open modal
-function openModal(index) {
-  currentIndex = index;
-  document.getElementById("lightboxModal").style.display = "block";
-  showImage(currentIndex);
-}
-
-// Close modal
-function closeModal() {
-  document.getElementById("lightboxModal").style.display = "none";
-}
-
-// Change slide
-function changeSlide(n) {
-  currentIndex = (currentIndex + n + certificates.length) % certificates.length;
-  showImage(currentIndex);
-}
-
-// Show image in modal
-function showImage(index) {
-  const modalImg = document.getElementById("modalImage");
-  const caption = document.getElementById("caption");
-  modalImg.src = certificates[index].src;
-  caption.textContent = certificates[index].caption;
-}
-
-// Link buttons to modal
-document.addEventListener('DOMContentLoaded', function() {
-  const viewButtons = document.querySelectorAll('.btn-view');
-
-  viewButtons.forEach((button, index) => {
-    button.addEventListener('click', function() {
-      openModal(index); // open modal with correct image
-    });
-  });
-});
-
- // Create animated particles
-    function createParticles() {
-      const particlesContainer = document.getElementById('particles');
-      const particleCount = 20;
-
-      for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 15 + 's';
-        particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-        particlesContainer.appendChild(particle);
-      }
-    }
-
-    // Interactive timeline nodes
-    document.querySelectorAll('.timeline-node').forEach((node, index) => {
-      node.addEventListener('click', () => {
-        const card = node.nextElementSibling;
-        card.style.transform = 'scale(1.1)';
-        card.style.zIndex = '100';
-        
-        setTimeout(() => {
-          card.style.transform = '';
-          card.style.zIndex = '';
-        }, 2000);
-      });
-    });
-
-    // Scroll-triggered animations
-    const observerOptions = {
-      threshold: 0.2,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationPlayState = 'running';
-          
-          // Add stagger effect to tech items
-          const techItems = entry.target.querySelectorAll('.tech-item');
-          techItems.forEach((item, index) => {
-            setTimeout(() => {
-              item.style.transform = 'translateY(0) scale(1)';
-              item.style.opacity = '1';
-            }, index * 100);
-          });
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.timeline-item').forEach(item => {
-      observer.observe(item);
-      
-      // Initialize tech items
-      const techItems = item.querySelectorAll('.tech-item');
-      techItems.forEach(tech => {
-        tech.style.transform = 'translateY(20px) scale(0.8)';
-        tech.style.opacity = '0';
-        tech.style.transition = 'all 0.4s ease';
-      });
-    });
-
-    // Smooth scrolling for timeline navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-          });
-        }
-      });
-    });
-
-    // Initialize particles
-    createParticles();
-
-    // Add parallax effect to timeline line
-    window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset;
-      const timelineLine = document.querySelector('.timeline-line');
-      if (timelineLine) {
-        timelineLine.style.transform = `translateX(-50%) translateY(${scrolled * 0.1}px)`;
-      }
-    });
-
-    // Dynamic background color based on scroll position
-    let ticking = false;
-    
-    function updateBackground() {
-      const scrolled = window.pageYOffset;
-      const maxScroll = document.body.scrollHeight - window.innerHeight;
-      const scrollPercent = scrolled / maxScroll;
-      
-      const color1 = { r: 0, g: 0, b: 0 };
-      const color2 = { r: 20, g: 10, b: 30 };
-      
-      const r = Math.round(color1.r + (color2.r - color1.r) * scrollPercent);
-      const g = Math.round(color1.g + (color2.g - color1.g) * scrollPercent);
-      const b = Math.round(color1.b + (color2.b - color1.b) * scrollPercent);
-      
-      document.body.style.background = `linear-gradient(135deg, rgb(${r}, ${g}, ${b}) 0%, #000 50%, rgb(${r}, ${g}, ${b}) 100%)`;
-      
-      ticking = false;
-    }
-
-    function requestTick() {
-      if (!ticking) {
-        requestAnimationFrame(updateBackground);
-        ticking = true;
-      }
-    }
-
-    window.addEventListener('scroll', requestTick);
-
-  </script>
-
-
-
-
 </body>
 </html>
