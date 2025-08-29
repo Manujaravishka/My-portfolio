@@ -1,6 +1,6 @@
  #second-line {
   margin-top: -4px;
-  color: #c44614;
+  color: #924526;
 
 }
 #se-p{
@@ -9,7 +9,7 @@
 }
 
 .se-icone a{
-  color: white;
+  color: rgb(185, 179, 179);
   font-size: 30px;
  transition: transform 0.2s ease, color 0.2s ease;
 
