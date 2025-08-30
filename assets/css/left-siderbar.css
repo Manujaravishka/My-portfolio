@@ -9,6 +9,8 @@
   overflow-y: auto;
   display: flex;
   justify-content: flex-start;
+   
+  
 
   
   background-color: #1a1a1a; /* dark gray */
@@ -28,10 +30,10 @@
   position: relative;
   margin-top: 100px;
   margin-left: 65px;
-  background:rgb(230, 225, 225);;
+  background:rgb(185, 179, 179);;
   width: 303px;
   height: 570px;
-  border-radius: 17px;
+  border-radius: 15px;
   padding: 20px 15px;
   display: flex;
   flex-direction: column;
@@ -71,7 +73,7 @@
 }
 
 .sidebar-inner-top h2.last-name {
-  color: #c44614;
+  color: #924526;
   left: -25px;
   margin-top: -6px;
 }
@@ -94,7 +96,7 @@
 }
 
 .left-icon a {
-  color: #f97316;
+  color:  #924526;
   font-size: 29px;
   text-decoration: none;
   display: flex;
