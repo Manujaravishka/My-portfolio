@@ -29,7 +29,7 @@
   padding: 15px;
   border: none;
   border-radius: 6px;
-  background: #e5e5e5;
+  background:  rgb(185, 179, 179);
   font-size: 10px;
   width: 570px;
 }
@@ -41,7 +41,7 @@
 
 .submit-btn {
   padding: 12px;
-  background: linear-gradient(90deg, #c44614, #e6542a, #c44614);
+  background: linear-gradient( #924526, #924526, #924526,  #924526);
   border: none;
   border-radius: 6px;
   color: white;
@@ -67,5 +67,5 @@
   bottom: 200px;
 }
 #info-h3{
- color: #c44614;
+ color:   #924526;
 }

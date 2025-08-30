@@ -1,0 +1,60 @@
+.ascard {
+  width: 630px;
+  height: 290px;
+  border-radius: 9px;
+  background: #212121;
+  display: flex;
+  gap: 10px;
+  padding: .4em;
+  position: relative;
+  left: 40px;
+}
+
+.ascard p {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all .5s;
+  background: #212121;
+  border: 4px solid #141414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ascard p:hover {
+  flex: 4;
+}
+
+.ascard p span {
+  min-width: 14em;
+  padding: .5em;
+  text-align: center;
+  transform: rotate(-90deg);
+  transition: all .5s;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.ascard p:hover span {
+  transform: rotate(0);
+}
+
+/* button link style */
+.ascard p span a {
+  display: inline-block;
+  padding: 8px 15px;
+  border-radius: 6px;
+
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background .3s, transform .3s;
+}
+
+.ascard p span a:hover {
+ color: #924526;
+  transform: scale(1.1);
+}
