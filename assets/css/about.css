@@ -12,12 +12,13 @@
   color: rgb(185, 179, 179);
   font-size: 30px;
  transition: transform 0.2s ease, color 0.2s ease;
-
+display: inline-block; 
   
 
 }
-.se-icone a{
+.se-icone a:hover{
    transform: scale(1.2);
+  
 }
 .se-icone button{
   padding: 1.3em 3em;
@@ -33,6 +34,7 @@
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
+  
 
   position: relative;
   bottom: 8px;
