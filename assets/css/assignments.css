@@ -1,13 +1,19 @@
+/* ASSIGNMENTS SECTION */
+
+.assignments {
+  margin: 60px 0;
+}
+
 .ascard {
-  width: 630px;
-  height: 290px;
+  width: 100%;
+  max-width: clamp(400px, 50vw, 630px);
+  height: clamp(250px, 25vw, 290px);
   border-radius: 9px;
   background: #212121;
   display: flex;
   gap: 10px;
-  padding: .4em;
-  position: relative;
-  left: 40px;
+  padding: 0.4em;
+  margin: 0 auto;
 }
 
 .ascard p {
@@ -16,7 +22,7 @@
   overflow: hidden;
   cursor: pointer;
   border-radius: 2px;
-  transition: all .5s;
+  transition: all 0.5s;
   background: #212121;
   border: 4px solid #141414;
   display: flex;
@@ -30,31 +36,30 @@
 
 .ascard p span {
   min-width: 14em;
-  padding: .5em;
+  padding: 0.5em;
   text-align: center;
   transform: rotate(-90deg);
-  transition: all .5s;
+  transition: all 0.5s;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
+  font-size: clamp(10px, 1vw, 14px);
 }
 
 .ascard p:hover span {
   transform: rotate(0);
 }
 
-/* button link style */
 .ascard p span a {
   display: inline-block;
   padding: 8px 15px;
   border-radius: 6px;
-
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  transition: background .3s, transform .3s;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .ascard p span a:hover {
- color: #924526;
+  color: #924526;
   transform: scale(1.1);
 }

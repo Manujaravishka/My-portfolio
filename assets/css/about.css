@@ -1,28 +1,56 @@
- #second-line {
+/*    MAIN CONTENT     */
+
+.main-content {
+  margin-left: clamp(300px, 35vw, 650px);
+  margin-top: 100px;
+  margin-bottom: 65px;
+  padding: clamp(20px, 3vw, 40px);
+  color: #f3f1f1;
+  flex-grow: 1;
+  min-height: calc(100vh - 115px);
+  overflow-y: auto;
+}
+
+.main-content h1 {
+  font-size: clamp(40px, 7vw, 100px);
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  color: rgb(255, 255, 255);
+  line-height: 1.1;
+  position: relative;
+}
+
+#second-line {
   margin-top: -4px;
   color: #924526;
-
 }
-#se-p{
+
+#se-p {
   margin-top: 10px;
-  font-size: 20px;
+  font-size: clamp(14px, 1.5vw, 20px);
 }
 
-.se-icone a{
+.se-icone {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.se-icone a {
   color: rgb(185, 179, 179);
-  font-size: 30px;
- transition: transform 0.2s ease, color 0.2s ease;
-display: inline-block; 
-  
+  font-size: clamp(24px, 2.5vw, 30px);
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block;
+}
 
+.se-icone a:hover {
+  transform: scale(1.2);
 }
-.se-icone a:hover{
-   transform: scale(1.2);
-  
-}
-.se-icone button{
+
+.se-icone button {
   padding: 1.3em 3em;
-  font-size: 10px;
+  font-size: clamp(8px, 0.8vw, 10px);
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: 500;
@@ -34,19 +62,15 @@ display: inline-block;
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
-  
-
-  position: relative;
-  bottom: 8px;
 }
 
-button:hover {
-  background-color:  #924526;
+.se-icone button:hover {
+  background-color: #924526;
   box-shadow: 0px 15px 20px rgba(146, 130, 116, 0.4);
   color: #fff;
   transform: translateY(-7px);
 }
 
-button:active {
+.se-icone button:active {
   transform: translateY(-1px);
 }

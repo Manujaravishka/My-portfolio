@@ -1,99 +1,96 @@
+/* CERTIFICATE SECTION */
 
-
-.container .card{
-    position: relative;
-    cursor: pointer;
-    
+.certificate {
+  margin: 60px 0;
 }
 
-.container .card .face{
-    width: 300px;
-    height: 200px;
-    transition: 0.5s;
+.certificate .container .card .face {
+  width: clamp(250px, 25vw, 300px);
+  height: clamp(170px, 17vw, 200px);
+  transition: 0.5s;
 }
 
-.container .card .face.face1{
-    position: relative;
-    background: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    transform: translateY(100px);
+.certificate .container .card .face.face1 {
+  position: relative;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
 }
 
-.container .card:hover .face.face1{
-    background: gray ;
-    transform: translateY(0);
+.certificate .container .card:hover .face.face1 {
+  background: gray;
+  transform: translateY(0);
 }
 
-.container .card .face.face1 .content{
-    opacity: 0.2;
-    transition: 0.5s;
+.certificate .container .card .face.face1 .content {
+  opacity: 0.2;
+  transition: 0.5s;
 }
 
-.container .card:hover .face.face1 .content{
-    opacity: 1;
+.certificate .container .card:hover .face.face1 .content {
+  opacity: 1;
 }
 
-.container .card .face.face1 .content img{
-    max-width: 100px;
+.certificate .container .card .face.face1 .content img {
+  max-width: clamp(70px, 8vw, 100px);
 }
 
-.container .card .face.face1 .content h3{
-    margin: 10px 0 0;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-    font-size: 1.5em;
+.certificate .container .card .face.face1 .content h3 {
+  margin: 10px 0 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: clamp(1.2em, 1.3vw, 1.5em);
 }
 
-.container .card .face.face2{
-    position: relative;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-    transform: translateY(-100px);
+.certificate .container .card .face.face2 {
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
 }
 
-.container .card:hover .face.face2{
-    transform: translateY(0);
+.certificate .container .card:hover .face.face2 {
+  transform: translateY(0);
 }
 
-.container .card .face.face2 .content p{
-    margin: 0;
-    padding: 0;
+.certificate .container .card .face.face2 .content p {
+  margin: 0;
+  padding: 0;
+  font-size: clamp(11px, 1vw, 14px);
 }
 
-.container .card .face.face2 .content a{
-    margin: 15px 0 0;
-    display:  inline-block;
-    text-decoration: none;
-    font-weight: 900;
-    color: #333;
-    padding: 5px;
-    border: 1px solid #333;
+.certificate .container .card .face.face2 .content a {
+  margin: 15px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: #333;
+  padding: 5px;
+  border: 1px solid #333;
+  font-size: clamp(11px, 1vw, 14px);
 }
 
-.container .card .face.face2 .content a:hover{
-   color: #090909;
+.certificate .container .card .face.face2 .content a:hover {
+  color: #090909;
   padding: 0.7em 1.7em;
-  font-size: 18px;
   border-radius: 0.5em;
   background: #e8e8e8;
   cursor: pointer;
   border: 1px solid #e8e8e8;
   transition: all 0.3s;
   box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
-
-   color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
-
 }
-#p{
-    color: black;
+
+#p {
+  color: black;
 }
+

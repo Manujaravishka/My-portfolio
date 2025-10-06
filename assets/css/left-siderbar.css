@@ -1,19 +1,18 @@
+/* LEFT SIDEBAR */
+
 .left-sidebar {
   position: fixed;
   top: 30px;
   left: 0;
-  width: 650px;
-  height: 700px;
-  background:  #141414; 
+  width: clamp(300px, 35vw, 650px);
+  height: calc(100vh - 60px);
+  max-height: 700px;
+  background: #141414;
   z-index: 999;
   overflow-y: auto;
   display: flex;
   justify-content: flex-start;
-   
-  
-
-  
-  background-color: #1a1a1a; 
+  background-color: #1a1a1a;
   background-image: 
     repeating-linear-gradient(
       to right,
@@ -22,17 +21,16 @@
       transparent 1px,
       transparent 250px
     );
-
-
 }
 
 .sidebar-inner {
   position: relative;
   margin-top: 100px;
-  margin-left: 65px;
-  background:rgb(250, 248, 248);;
-  width: 303px;
-  height: 570px;
+  margin-left: clamp(20px, 4vw, 65px);
+  background: rgb(250, 248, 248);
+  width: min(90%, 303px);
+  height: auto;
+  max-height: 570px;
   border-radius: 15px;
   padding: 20px 15px;
   display: flex;
@@ -49,17 +47,16 @@
 }
 
 .sidebar-inner-top img {
-  width: 197px;
-  height: 227px;
+  width: clamp(150px, 15vw, 197px);
+  height: clamp(170px, 18vw, 227px);
   object-fit: cover;
   border-radius: 12px;
   position: relative;
   top: 25px;
-  
 }
 
 .sidebar-inner-top h2 {
-  font-size: 35px;
+  font-size: clamp(24px, 2.5vw, 35px);
   font-weight: bold;
   line-height: 1.1;
   position: relative;
@@ -79,12 +76,10 @@
 }
 
 #left-p {
-  left: -25px;
-  font-size: 14px;
+  font-size: clamp(12px, 1.2vw, 14px);
   color: #333;
   position: relative;
   left: 20px;
-
   margin-top: 39px;
   line-height: 1.1;
 }
@@ -96,8 +91,8 @@
 }
 
 .left-icon a {
-  color:  #924526;
-  font-size: 29px;
+  color: #924526;
+  font-size: clamp(22px, 2vw, 29px);
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -109,4 +104,3 @@
   transform: scale(1.2);
   color: #d35400;
 }
-
