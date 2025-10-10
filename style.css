@@ -1,4 +1,4 @@
-/*RESET & BASE STYLES*/
+/*================== RESET & BASE STYLES ==================*/
 
 * {
   margin: 0;
@@ -28,8 +28,7 @@ body {
     );
 }
 
-/*    HEADER   */
-
+/*================== HEADER ==================*/
 header {
   position: fixed;
   top: 0;
@@ -64,8 +63,6 @@ header {
   color: #eee;
   margin: 50px;
 }
-
-/* NAV & ICON BAR */
 
 nav {
   position: fixed;
@@ -108,8 +105,7 @@ nav {
   transform: translateY(-100%);
 }
 
-/* LEFT SIDEBAR */
-
+/*================== LEFT SIDEBAR ==================*/
 .left-sidebar {
   position: fixed;
   top: 30px;
@@ -215,6 +211,18 @@ nav {
   color: #d35400;
 }
 
+/*================== MAIN CONTENT ==================*/
+.main-content {
+  margin-left: clamp(300px, 35vw, 650px);
+  margin-top: 100px;
+  margin-bottom: 65px;
+  padding: clamp(20px, 3vw, 40px);
+  color: #f3f1f1;
+  flex-grow: 1;
+  min-height: calc(100vh - 115px);
+  overflow-y: auto;
+}
+
 /*    MAIN CONTENT     */
 
 .main-content {
@@ -291,6 +299,47 @@ nav {
 .se-icone button:active {
   transform: translateY(-1px);
 }
+
+/* SKILLS SECTION */
+
+.skills-section {
+  margin: 60px 0;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: clamp(20px, 2vw, 30px);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: #1e1e1e;
+  padding: clamp(15px, 2vw, 20px);
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(167, 74, 57, 0.6);
+}
+
+.skill-card img {
+  width: clamp(40px, 4vw, 60px);
+  height: clamp(40px, 4vw, 60px);
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.skill-card p {
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+  margin: 0;
+}
+
 
 /* ASSIGNMENTS SECTION */
 
@@ -648,72 +697,140 @@ nav {
 }
 
 
-/*    RESPONSIVE    */
+/*================== FOOTER ==================*/
+footer {
+  width: 100%;
+  background: #141414;
+  text-align: center;
+  padding: 25px 0;
+  color: #aaa;
+  margin-top: auto;
+  border-top: 1px solid #222;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.4);
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  letter-spacing: 0.5px;
+}
 
+footer a {
+  color: #924526;
+  text-decoration: none;
+  margin-left: 5px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #d35400;
+  text-decoration: underline;
+}
+
+/*================== RESPONSIVE ADJUSTMENTS ==================*/
 @media (max-width: 1200px) {
   .left-sidebar {
-    width: clamp(280px, 30vw, 500px);
+    width: 280px;
   }
-  
   .main-content {
-    margin-left: clamp(280px, 30vw, 500px);
+    margin-left: 280px;
+  }
+  .header-content h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .left-sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    left: -260px;
+    top: 0;
+    transition: left 0.3s ease;
+    z-index: 9999;
+  }
+  .left-sidebar.active {
+    left: 0;
+  }
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  .header-content {
+    height: 80px;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .header-content h1 {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+  nav {
+    top: 10px;
+  }
+  .icon-bar {
+    padding: 8px 20px;
   }
 }
 
 @media (max-width: 768px) {
-  .left-sidebar {
-    width: 100%;
-    position: relative;
-    height: auto;
-    max-height: none;
-  }
-  
-  .main-content {
-    margin-left: 0;
-    padding: 15px;
-  }
-
-  .icon-bar {
-    padding: 8px 15px;
-    gap: 10px;
-  }
-
-  .icon-bar a {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .skills-container {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  }
-  
-  .container {
+  body {
     flex-direction: column;
   }
-  
-  .ascard {
-    height: auto;
-    min-height: 200px;
+  .left-sidebar {
+    width: 230px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -230px;
+    transition: left 0.4s ease;
   }
-  
-  .contact-info {
-    position: static;
-    margin: 40px auto 0;
+  .left-sidebar.active {
+    left: 0;
   }
-}
-
-@media (min-width: 1920px) {
+  .sidebar-inner {
+    margin-top: 80px;
+    margin-left: 15px;
+    width: 90%;
+  }
   .main-content {
-    max-width: 1400px;
+    margin-left: 0;
+    margin-top: 110px;
+    padding: 20px;
   }
-
+  .header-content h1 {
+    font-size: 1.3rem;
+  }
+  .icon-bar {
+    gap: 10px;
+    padding: 8px 15px;
+  }
+  .icon-bar a {
+    font-size: 20px;
+  }
+  footer {
+    padding: 20px 0;
+    font-size: 0.85rem;
+  }
 }
-.footer-container{
-  position: absolute;
-  background-color: #2196f3;
-  height: 100px;
-  width: 1200px;
-  bottom: -100px;
-  margin: auto;
- 
+
+@media (max-width: 480px) {
+  .header-content {
+    height: 70px;
+    padding: 0 10px;
+  }
+  .header-content h1 {
+    font-size: 1.1rem;
+  }
+  .sidebar-inner-top h2 {
+    font-size: 1.2rem;
+  }
+  .sidebar-inner {
+    padding: 10px;
+  }
+  .main-content {
+    margin-top: 100px;
+    padding: 15px;
+  }
+  footer {
+    font-size: 0.8rem;
+    padding: 18px 0;
+  }
 }
