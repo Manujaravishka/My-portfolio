@@ -82,7 +82,7 @@ nav {
   width: clamp(300px, 35vw, 650px);
   height: calc(100vh - 60px);
   max-height: 700px;
-  background: #141414;
+  background:  #1b1b1b;
   z-index: 999;
   overflow-y: auto;
   display: flex;
